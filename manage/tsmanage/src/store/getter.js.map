@@ -1,0 +1,1 @@
+{"version":3,"file":"getter.js","sourceRoot":"","sources":["getter.ts"],"names":[],"mappings":"AAEA,MAAM,OAAO,GAAqB;IAC9B,IAAI,CAAC,KAAS;QACV,OAAO,KAAK,CAAC,IAAI,CAAC;IACtB,CAAC;IACD,MAAM,CAAC,KAAS;QACZ,OAAO,KAAK,CAAC,MAAM,CAAC;IACxB,CAAC;CACJ,CAAA;AAED,eAAe,OAAO,CAAC"}
