@@ -1,7 +1,12 @@
-import axios from 'axios';
-import { Message } from 'element-ui';
-import router from '@/router';
-const service = axios.create({
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = __importDefault(require("axios"));
+const element_ui_1 = require("element-ui");
+const router_1 = __importDefault(require("@/router"));
+const service = axios_1.default.create({
     timeout: 10000 // 超时时间
 });
 // 请求拦截
@@ -23,7 +28,7 @@ service.interceptors.response.use((response) => {
             case 401:
                 errMsg = '登录状态失效，请重新登录';
                 localStorage.removeItem('tsToken');
-                router.push('/login');
+                router_1.default.push('/login');
                 break;
             case 403:
                 errMsg = '拒绝访问';
@@ -57,8 +62,7 @@ service.interceptors.response.use((response) => {
     else {
         errMsg = err; // 没有status
     }
-    Message.error(errMsg);
+    element_ui_1.Message.error(errMsg);
     return Promise.reject(errMsg);
 });
-export default service;
-//# sourceMappingURL=http.js.map
+exports.default = service;

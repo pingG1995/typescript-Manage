@@ -1,11 +1,11 @@
-import { GetterTree } from 'vuex'; 
+import { GetterTree } from 'vuex';
 
 const getters:GetterTree<any,any>={
-    user(state:any):any{
+    user(state:any):any {
         return state.user;
     },
-    router(state:any):any {
-        return state.router;
+    routers(state:any):any {
+        return state.routers;
     }
 }
 

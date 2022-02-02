@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const mutations = {
     SET_USER(state, user) {
         state.user = user;
@@ -6,5 +8,4 @@ const mutations = {
         state.routers = routers;
     }
 };
-export default mutations;
-//# sourceMappingURL=mutations.js.map
+exports.default = mutations;

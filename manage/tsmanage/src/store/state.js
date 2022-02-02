@@ -1,6 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("../router/index");
 const state = {
     user: null,
-    router: [],
+    routers: index_1.asyncRouterMap,
 };
-export default state;
-//# sourceMappingURL=state.js.map
+exports.default = state;

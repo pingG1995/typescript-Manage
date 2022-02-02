@@ -10,7 +10,7 @@ const service=axios.create({
 service.interceptors.request.use(
     (config: AxiosRequestConfig) => {
         if (localStorage.tsToken) {
-          config.headers.Authorization = localStorage.tsToken;
+          (config.headers as any).Authorization = localStorage.tsToken;
         }
         return config;
       },
@@ -35,35 +35,35 @@ service.interceptors.response.use((response:AxiosResponse)=>{
             case 403:
               errMsg = '拒绝访问';
               break;
-    
+
             case 408:
               errMsg = '请求超时';
               break;
-    
+
             case 500:
               errMsg = '服务器内部错误';
               break;
-    
+
             case 501:
               errMsg = '服务未实现';
               break;
-    
+
             case 502:
               errMsg = '网关错误';
               break;
-    
+
             case 503:
               errMsg = '服务不可用';
               break;
-    
+
             case 504:
               errMsg = '网关超时';
               break;
-    
+
             case 505:
               errMsg = 'HTTP版本不受支持';
               break;
-    
+
             default:
               errMsg = err.response.data.msg;
               break;

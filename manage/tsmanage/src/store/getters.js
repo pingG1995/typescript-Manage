@@ -1,10 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const getters = {
     user(state) {
         return state.user;
     },
-    router(state) {
-        return state.router;
+    routers(state) {
+        return state.routers;
     }
 };
-export default getters;
-//# sourceMappingURL=getters.js.map
+exports.default = getters;
